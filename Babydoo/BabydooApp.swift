@@ -11,7 +11,7 @@ import SwiftUI
 struct BabydooApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DueDateView()
         }
     }
 }

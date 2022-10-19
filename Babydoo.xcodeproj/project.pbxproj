@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8504022428FFD92300789A94 /* BabydooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504022328FFD92300789A94 /* BabydooApp.swift */; };
-		8504022628FFD92300789A94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504022528FFD92300789A94 /* ContentView.swift */; };
 		8504022828FFD92500789A94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8504022728FFD92500789A94 /* Assets.xcassets */; };
 		8504022B28FFD92500789A94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8504022A28FFD92500789A94 /* Preview Assets.xcassets */; };
 		8504023528FFD92500789A94 /* BabydooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504023428FFD92500789A94 /* BabydooTests.swift */; };
 		8504023F28FFD92500789A94 /* BabydooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504023E28FFD92500789A94 /* BabydooUITests.swift */; };
 		8504024128FFD92500789A94 /* BabydooUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504024028FFD92500789A94 /* BabydooUITestsLaunchTests.swift */; };
+		8504024E28FFDD1500789A94 /* DueDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504024D28FFDD1500789A94 /* DueDateView.swift */; };
+		8504025028FFDD5800789A94 /* UserDefaults+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504024F28FFDD5800789A94 /* UserDefaults+App.swift */; };
+		8504025628FFE38900789A94 /* StarLardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8504025528FFE38900789A94 /* StarLardKit */; };
+		8504025828FFE3B800789A94 /* DeploymentEnvironment+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504025728FFE3B800789A94 /* DeploymentEnvironment+App.swift */; };
+		8504025C28FFF03200789A94 /* PregnancyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504025B28FFF03200789A94 /* PregnancyProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		8504022028FFD92300789A94 /* Babydoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babydoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504022328FFD92300789A94 /* BabydooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabydooApp.swift; sourceTree = "<group>"; };
-		8504022528FFD92300789A94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8504022728FFD92500789A94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8504022A28FFD92500789A94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8504023028FFD92500789A94 /* BabydooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabydooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,10 @@
 		8504023A28FFD92500789A94 /* BabydooUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabydooUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504023E28FFD92500789A94 /* BabydooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabydooUITests.swift; sourceTree = "<group>"; };
 		8504024028FFD92500789A94 /* BabydooUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabydooUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8504024D28FFDD1500789A94 /* DueDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateView.swift; sourceTree = "<group>"; };
+		8504024F28FFDD5800789A94 /* UserDefaults+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+App.swift"; sourceTree = "<group>"; };
+		8504025728FFE3B800789A94 /* DeploymentEnvironment+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeploymentEnvironment+App.swift"; sourceTree = "<group>"; };
+		8504025B28FFF03200789A94 /* PregnancyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8504025628FFE38900789A94 /* StarLardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				8504022328FFD92300789A94 /* BabydooApp.swift */,
-				8504022528FFD92300789A94 /* ContentView.swift */,
+				8504025A28FFE4E200789A94 /* Utility */,
+				8504025928FFE4D100789A94 /* Views */,
 				8504022728FFD92500789A94 /* Assets.xcassets */,
 				8504022928FFD92500789A94 /* Preview Content */,
 			);
@@ -127,6 +136,24 @@
 			path = BabydooUITests;
 			sourceTree = "<group>";
 		};
+		8504025928FFE4D100789A94 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8504024D28FFDD1500789A94 /* DueDateView.swift */,
+				8504025B28FFF03200789A94 /* PregnancyProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8504025A28FFE4E200789A94 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8504025728FFE3B800789A94 /* DeploymentEnvironment+App.swift */,
+				8504024F28FFDD5800789A94 /* UserDefaults+App.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +170,9 @@
 			dependencies = (
 			);
 			name = Babydoo;
+			packageProductDependencies = (
+				8504025528FFE38900789A94 /* StarLardKit */,
+			);
 			productName = Babydoo;
 			productReference = 8504022028FFD92300789A94 /* Babydoo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 8504021728FFD92300789A94;
+			packageReferences = (
+				8504025428FFE38900789A94 /* XCRemoteSwiftPackageReference "StarLardKit" */,
+			);
 			productRefGroup = 8504022128FFD92300789A94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8504022628FFD92300789A94 /* ContentView.swift in Sources */,
+				8504025028FFDD5800789A94 /* UserDefaults+App.swift in Sources */,
+				8504025C28FFF03200789A94 /* PregnancyProgressView.swift in Sources */,
 				8504022428FFD92300789A94 /* BabydooApp.swift in Sources */,
+				8504025828FFE3B800789A94 /* DeploymentEnvironment+App.swift in Sources */,
+				8504024E28FFDD1500789A94 /* DueDateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8504025428FFE38900789A94 /* XCRemoteSwiftPackageReference "StarLardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StarLard/StarLardKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8504025528FFE38900789A94 /* StarLardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8504025428FFE38900789A94 /* XCRemoteSwiftPackageReference "StarLardKit" */;
+			productName = StarLardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8504021828FFD92300789A94 /* Project object */;
 }
