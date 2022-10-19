@@ -12,6 +12,8 @@ extension UserDefaults {
         case dueDate = "due-date"
     }
     
+    static let appGroup: UserDefaults = UserDefaults(suiteName: "group.starlard.babydoo") ?? UserDefaults()
+    
     var dueDate: Date? {
         get {
             guard let timeIntervalSince1970 = value(forKey: Key.dueDate.rawValue) as? TimeInterval else { return nil }

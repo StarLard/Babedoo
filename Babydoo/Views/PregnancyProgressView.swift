@@ -13,10 +13,10 @@ struct PregnancyProgressView: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            Gauge(value: progressPercentage) {
+            Gauge(value: calculator.progressPercentage(from: now)) {
                 EmptyView()
             } currentValueLabel: {
-                Text(Int(progressPercentage * 100).formatted(.percent))
+                Text(Int(calculator.progressPercentage(from: now) * 100).formatted(.percent))
             }
             .tint(Gradient(colors: [.green, .blue]))
             .gaugeStyle(.accessoryCircular)
@@ -24,60 +24,35 @@ struct PregnancyProgressView: View {
             
             Divider()
             
-            dateComponentView(value: alongValue(for: dateComponent),
-                              unit: dateComponent.unit,
+            dateComponentView(value: calculator.alongValue(from: now, for: dateDisplayComponent),
+                              unit: calculator.alongValue(from: now, for: dateDisplayComponent) == 1
+                              ? dateDisplayComponent.singularUnit
+                              : dateDisplayComponent.pluralUnit,
                               suffix: "along")
-
+            
             Divider()
             
-            dateComponentView(value: remaingValue(for: dateComponent),
-                              unit: dateComponent.unit,
+            dateComponentView(value: calculator.remaingValue(from: now, for: dateDisplayComponent),
+                              unit: calculator.remaingValue(from: now, for: dateDisplayComponent) == 1
+                              ? dateDisplayComponent.singularUnit
+                              : dateDisplayComponent.pluralUnit,
                               suffix: "to go")
         }
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation {
-                dateComponent = dateComponent.next
+                dateDisplayComponent = dateDisplayComponent.next
             }
         }
     }
     
     @State
-    private var dateComponent: DateComponent = .weeks
-    
-    private enum DateComponent {
-        case days
-        case weeks
-        case months
-        
-        var unit: LocalizedStringKey {
-            switch self {
-            case .days: return "days"
-            case .weeks: return "weeks"
-            case .months: return "months"
-            }
-        }
-        
-        var next: Self {
-            switch self {
-            case .days: return .weeks
-            case .weeks: return .months
-            case .months: return .days
-            }
-        }
-    }
-    
-    private let calendar = Calendar.current
-    
-    private var progressPercentage: Double {
-        let timeUntilDueDate = dueDate.timeIntervalSince(conceptionDate)
-        guard timeUntilDueDate != 0 else { return 1 }
-        let timeFromConception = Date.now.timeIntervalSince(conceptionDate)
-        return min(1, timeFromConception / timeUntilDueDate)
-    }
+    private var dateDisplayComponent: DateDisplayComponent = .weeks
+    private let now = Date.now
+    private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: dueDate, conceptionDate: conceptionDate) }
     
     private func dateComponentView(value: Int,
-                                   unit: LocalizedStringKey,
+                                   unit: String,
                                    suffix: LocalizedStringKey) -> some View {
         HStack(alignment: .lastTextBaseline, spacing: 4) {
             Text(value.formatted())
@@ -90,34 +65,6 @@ struct PregnancyProgressView: View {
             .font(.caption)
         }
         .frame(maxWidth: .infinity)
-    }
-    
-    private func remaingValue(for dateComponent: DateComponent) -> Int {
-        switch dateComponent {
-        case .days:
-            let components = calendar.dateComponents([.day], from: .now, to: dueDate)
-            return components.day ?? 0
-        case .weeks:
-            let components = calendar.dateComponents([.weekOfYear], from: .now, to: dueDate)
-            return components.weekOfYear ?? 0
-        case .months:
-            let components = calendar.dateComponents([.month], from: .now, to: dueDate)
-            return components.month ?? 0
-        }
-    }
-    
-    private func alongValue(for dateComponent: DateComponent) -> Int {
-        switch dateComponent {
-        case .days:
-            let components = calendar.dateComponents([.day], from: conceptionDate, to: .now)
-            return components.day ?? 0
-        case .weeks:
-            let components = calendar.dateComponents([.weekOfYear], from: conceptionDate, to: .now)
-            return components.weekOfYear ?? 0
-        case .months:
-            let components = calendar.dateComponents([.month], from: conceptionDate, to: .now)
-            return components.month ?? 0
-        }
     }
 }
 

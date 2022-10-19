@@ -7,6 +7,7 @@
 
 import SwiftUI
 import StarLardKit
+import WidgetKit
 
 struct DueDateView: View {
     @State
@@ -39,6 +40,7 @@ struct DueDateView: View {
         }.onChange(of: dueDate) { newValue in
             if !DeploymentEnvironment.isRunningForPreviews {
                 userDefaults.dueDate = newValue
+                WidgetCenter.shared.reloadAllTimelines()
             }
             withAnimation {
                 isDueDateSet = true
@@ -57,7 +59,7 @@ struct DueDateView: View {
         }
     }
     
-    private let userDefaults = UserDefaults.standard
+    private let userDefaults = UserDefaults.appGroup
     private let calendar = Calendar.current
 
     private var conceptionDate: Date {

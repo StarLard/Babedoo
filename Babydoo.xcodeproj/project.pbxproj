@@ -18,6 +18,23 @@
 		8504025628FFE38900789A94 /* StarLardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8504025528FFE38900789A94 /* StarLardKit */; };
 		8504025828FFE3B800789A94 /* DeploymentEnvironment+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504025728FFE3B800789A94 /* DeploymentEnvironment+App.swift */; };
 		8504025C28FFF03200789A94 /* PregnancyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504025B28FFF03200789A94 /* PregnancyProgressView.swift */; };
+		854A46492900029B0082013C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854A4634290002540082013C /* WidgetKit.framework */; };
+		854A464A2900029B0082013C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854A4636290002540082013C /* SwiftUI.framework */; };
+		854A464D2900029B0082013C /* BabydooWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A464C2900029B0082013C /* BabydooWidgets.swift */; };
+		854A46502900029C0082013C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854A464F2900029C0082013C /* Assets.xcassets */; };
+		854A46522900029C0082013C /* BabydooWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 854A464E2900029B0082013C /* BabydooWidgets.intentdefinition */; };
+		854A46532900029C0082013C /* BabydooWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 854A464E2900029B0082013C /* BabydooWidgets.intentdefinition */; };
+		854A46562900029C0082013C /* Babydoo WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 854A46482900029B0082013C /* Babydoo WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		854A465C2900697C0082013C /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A465B2900697C0082013C /* CounterWidget.swift */; };
+		854A465E290069AC0082013C /* GuageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A465D290069AC0082013C /* GuageWidget.swift */; };
+		854A466029006E210082013C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A465F29006E210082013C /* Provider.swift */; };
+		854A466129006F390082013C /* UserDefaults+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504024F28FFDD5800789A94 /* UserDefaults+App.swift */; };
+		854A466329006F4F0082013C /* DateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A466229006F4F0082013C /* DateConstants.swift */; };
+		854A466429006F4F0082013C /* DateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A466229006F4F0082013C /* DateConstants.swift */; };
+		854A4666290070ED0082013C /* DateDisplayComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A4665290070ED0082013C /* DateDisplayComponent.swift */; };
+		854A4667290070ED0082013C /* DateDisplayComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A4665290070ED0082013C /* DateDisplayComponent.swift */; };
+		854A466B29007ED90082013C /* PregnancyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A466A29007ED90082013C /* PregnancyCalculator.swift */; };
+		854A466C29007ED90082013C /* PregnancyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A466A29007ED90082013C /* PregnancyCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +52,28 @@
 			remoteGlobalIDString = 8504021F28FFD92300789A94;
 			remoteInfo = Babydoo;
 		};
+		854A46542900029C0082013C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8504021828FFD92300789A94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 854A46472900029B0082013C;
+			remoteInfo = "Babydoo WidgetsExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		854A465A2900029C0082013C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				854A46562900029C0082013C /* Babydoo WidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8504022028FFD92300789A94 /* Babydoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babydoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +89,22 @@
 		8504024F28FFDD5800789A94 /* UserDefaults+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+App.swift"; sourceTree = "<group>"; };
 		8504025728FFE3B800789A94 /* DeploymentEnvironment+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeploymentEnvironment+App.swift"; sourceTree = "<group>"; };
 		8504025B28FFF03200789A94 /* PregnancyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyProgressView.swift; sourceTree = "<group>"; };
+		852D8C0F2900986B003E248D /* Babydoo WidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Babydoo WidgetsExtension.entitlements"; sourceTree = "<group>"; };
+		854A4634290002540082013C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		854A4636290002540082013C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		854A46482900029B0082013C /* Babydoo WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Babydoo WidgetsExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		854A464C2900029B0082013C /* BabydooWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabydooWidgets.swift; sourceTree = "<group>"; };
+		854A464E2900029B0082013C /* BabydooWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BabydooWidgets.intentdefinition; sourceTree = "<group>"; };
+		854A464F2900029C0082013C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		854A46512900029C0082013C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		854A465B2900697C0082013C /* CounterWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterWidget.swift; sourceTree = "<group>"; };
+		854A465D290069AC0082013C /* GuageWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuageWidget.swift; sourceTree = "<group>"; };
+		854A465F29006E210082013C /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		854A466229006F4F0082013C /* DateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConstants.swift; sourceTree = "<group>"; };
+		854A4665290070ED0082013C /* DateDisplayComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDisplayComponent.swift; sourceTree = "<group>"; };
+		854A4668290078700082013C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		854A466929007D460082013C /* Babydoo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Babydoo.entitlements; sourceTree = "<group>"; };
+		854A466A29007ED90082013C /* PregnancyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,15 +130,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		854A46452900029B0082013C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854A464A2900029B0082013C /* SwiftUI.framework in Frameworks */,
+				854A46492900029B0082013C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8504021728FFD92300789A94 = {
 			isa = PBXGroup;
 			children = (
+				852D8C0F2900986B003E248D /* Babydoo WidgetsExtension.entitlements */,
 				8504022228FFD92300789A94 /* Babydoo */,
 				8504023328FFD92500789A94 /* BabydooTests */,
 				8504023D28FFD92500789A94 /* BabydooUITests */,
+				854A464B2900029B0082013C /* Babydoo Widgets */,
+				854A4633290002540082013C /* Frameworks */,
 				8504022128FFD92300789A94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +161,7 @@
 				8504022028FFD92300789A94 /* Babydoo.app */,
 				8504023028FFD92500789A94 /* BabydooTests.xctest */,
 				8504023A28FFD92500789A94 /* BabydooUITests.xctest */,
+				854A46482900029B0082013C /* Babydoo WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +169,8 @@
 		8504022228FFD92300789A94 /* Babydoo */ = {
 			isa = PBXGroup;
 			children = (
+				854A466929007D460082013C /* Babydoo.entitlements */,
+				854A4668290078700082013C /* Info.plist */,
 				8504022328FFD92300789A94 /* BabydooApp.swift */,
 				8504025A28FFE4E200789A94 /* Utility */,
 				8504025928FFE4D100789A94 /* Views */,
@@ -150,8 +219,34 @@
 			children = (
 				8504025728FFE3B800789A94 /* DeploymentEnvironment+App.swift */,
 				8504024F28FFDD5800789A94 /* UserDefaults+App.swift */,
+				854A466229006F4F0082013C /* DateConstants.swift */,
+				854A4665290070ED0082013C /* DateDisplayComponent.swift */,
+				854A466A29007ED90082013C /* PregnancyCalculator.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		854A4633290002540082013C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				854A4634290002540082013C /* WidgetKit.framework */,
+				854A4636290002540082013C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		854A464B2900029B0082013C /* Babydoo Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				854A464C2900029B0082013C /* BabydooWidgets.swift */,
+				854A465B2900697C0082013C /* CounterWidget.swift */,
+				854A465D290069AC0082013C /* GuageWidget.swift */,
+				854A465F29006E210082013C /* Provider.swift */,
+				854A464E2900029B0082013C /* BabydooWidgets.intentdefinition */,
+				854A464F2900029C0082013C /* Assets.xcassets */,
+				854A46512900029C0082013C /* Info.plist */,
+			);
+			path = "Babydoo Widgets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +259,12 @@
 				8504021C28FFD92300789A94 /* Sources */,
 				8504021D28FFD92300789A94 /* Frameworks */,
 				8504021E28FFD92300789A94 /* Resources */,
+				854A465A2900029C0082013C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				854A46552900029C0082013C /* PBXTargetDependency */,
 			);
 			name = Babydoo;
 			packageProductDependencies = (
@@ -213,6 +310,25 @@
 			productReference = 8504023A28FFD92500789A94 /* BabydooUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		854A46472900029B0082013C /* Babydoo WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 854A46572900029C0082013C /* Build configuration list for PBXNativeTarget "Babydoo WidgetsExtension" */;
+			buildPhases = (
+				854A46442900029B0082013C /* Sources */,
+				854A46452900029B0082013C /* Frameworks */,
+				854A46462900029B0082013C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Babydoo WidgetsExtension";
+			packageProductDependencies = (
+			);
+			productName = "Babydoo WidgetsExtension";
+			productReference = 854A46482900029B0082013C /* Babydoo WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,6 +349,9 @@
 					8504023928FFD92500789A94 = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = 8504021F28FFD92300789A94;
+					};
+					854A46472900029B0082013C = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
@@ -255,6 +374,7 @@
 				8504021F28FFD92300789A94 /* Babydoo */,
 				8504022F28FFD92500789A94 /* BabydooTests */,
 				8504023928FFD92500789A94 /* BabydooUITests */,
+				854A46472900029B0082013C /* Babydoo WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -283,6 +403,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		854A46462900029B0082013C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854A46502900029C0082013C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -290,11 +418,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				854A466329006F4F0082013C /* DateConstants.swift in Sources */,
+				854A46532900029C0082013C /* BabydooWidgets.intentdefinition in Sources */,
 				8504025028FFDD5800789A94 /* UserDefaults+App.swift in Sources */,
 				8504025C28FFF03200789A94 /* PregnancyProgressView.swift in Sources */,
+				854A4666290070ED0082013C /* DateDisplayComponent.swift in Sources */,
 				8504022428FFD92300789A94 /* BabydooApp.swift in Sources */,
 				8504025828FFE3B800789A94 /* DeploymentEnvironment+App.swift in Sources */,
 				8504024E28FFDD1500789A94 /* DueDateView.swift in Sources */,
+				854A466B29007ED90082013C /* PregnancyCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +447,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		854A46442900029B0082013C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854A466429006F4F0082013C /* DateConstants.swift in Sources */,
+				854A466129006F390082013C /* UserDefaults+App.swift in Sources */,
+				854A46522900029C0082013C /* BabydooWidgets.intentdefinition in Sources */,
+				854A465E290069AC0082013C /* GuageWidget.swift in Sources */,
+				854A4667290070ED0082013C /* DateDisplayComponent.swift in Sources */,
+				854A465C2900697C0082013C /* CounterWidget.swift in Sources */,
+				854A466029006E210082013C /* Provider.swift in Sources */,
+				854A464D2900029B0082013C /* BabydooWidgets.swift in Sources */,
+				854A466C29007ED90082013C /* PregnancyCalculator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -327,6 +475,11 @@
 			isa = PBXTargetDependency;
 			target = 8504021F28FFD92300789A94 /* Babydoo */;
 			targetProxy = 8504023B28FFD92500789A94 /* PBXContainerItemProxy */;
+		};
+		854A46552900029C0082013C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 854A46472900029B0082013C /* Babydoo WidgetsExtension */;
+			targetProxy = 854A46542900029C0082013C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -448,14 +601,17 @@
 		8504024528FFD92500789A94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Babydoo/Babydoo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Babydoo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3D969KFHW5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Babydoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,14 +633,17 @@
 		8504024628FFD92500789A94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Babydoo/Babydoo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Babydoo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3D969KFHW5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Babydoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -579,6 +738,62 @@
 			};
 			name = Release;
 		};
+		854A46582900029C0082013C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Babydoo WidgetsExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D969KFHW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Babydoo Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Babydoo Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.starlard.Babydoo.Babydoo-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		854A46592900029C0082013C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Babydoo WidgetsExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D969KFHW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Babydoo Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Babydoo Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.starlard.Babydoo.Babydoo-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -614,6 +829,15 @@
 			buildConfigurations = (
 				8504024B28FFD92500789A94 /* Debug */,
 				8504024C28FFD92500789A94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		854A46572900029C0082013C /* Build configuration list for PBXNativeTarget "Babydoo WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854A46582900029C0082013C /* Debug */,
+				854A46592900029C0082013C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
