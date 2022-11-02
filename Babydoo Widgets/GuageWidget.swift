@@ -32,7 +32,7 @@ struct GuageWidgetEntryView : View {
         .gaugeStyle(.accessoryCircular)
     }
     
-    private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: entry.dueDate, conceptionDate: conceptionDate) }
+    private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: entry.dueDate, conceptionDate: entry.conceptionDate) }
     
     private var value: Int {
         switch entry.configuration.timeValue {
@@ -45,10 +45,6 @@ struct GuageWidgetEntryView : View {
     
     var progressPercentage: Double {
         calculator.progressPercentage(from: entry.date)
-    }
-    
-    private var conceptionDate: Date {
-        Calendar.current.date(byAdding: .month, value: -9, to: entry.dueDate) ?? entry.dueDate
     }
 }
 
@@ -71,7 +67,6 @@ struct GuageWidget: Widget {
         .configurationDisplayName("Progress Widget")
         .description("A visual representation of your pregnancy.")
         .supportedFamilies([.accessoryCircular,
-                            .accessoryRectangular,
                             .systemSmall])
     }
 }
@@ -80,7 +75,6 @@ struct GuageWidget: Widget {
 struct GuageWidget_Previews: PreviewProvider {
     static var families = [
         WidgetFamily.accessoryCircular,
-        .accessoryRectangular,
         .systemSmall,
     ]
     
@@ -91,6 +85,7 @@ struct GuageWidget_Previews: PreviewProvider {
             ForEach(0..<3) { index in
                 GuageWidgetEntryView(entry: SimpleEntry(date: .now,
                                                         dueDate: Date.now.addingTimeInterval(50 * 24 * 60 * 60),
+                                                        conceptionDate: Date.now.addingTimeInterval(-50 * 24 * 60 * 60),
                                                         displayComponent: .weeks,
                                                         configuration: ConfigurationIntent()))
                     .previewContext(contexts[index])

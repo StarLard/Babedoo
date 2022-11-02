@@ -14,13 +14,15 @@ struct Provider: IntentTimelineProvider {
         let configuration = ConfigurationIntent()
         let displayComponent = DateDisplayComponent(timeUnit: configuration.timeUnit)
         let dueDate = UserDefaults.appGroup.dueDate ?? calendar.date(byAdding: .month, value: 9, to: .now) ?? .now
-        return SimpleEntry(date: Date(), dueDate: dueDate, displayComponent: displayComponent, configuration: configuration)
+        let conceptionDate = UserDefaults.appGroup.conceptionDate ?? .now
+        return SimpleEntry(date: Date(), dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let displayComponent = DateDisplayComponent(timeUnit: configuration.timeUnit)
         let dueDate = UserDefaults.appGroup.dueDate ?? calendar.date(byAdding: .month, value: 9, to: .now) ?? .now
-        let entry = SimpleEntry(date: Date(), dueDate: dueDate, displayComponent: displayComponent, configuration: configuration)
+        let conceptionDate = UserDefaults.appGroup.conceptionDate ?? .now
+        let entry = SimpleEntry(date: Date(), dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
         completion(entry)
     }
 
@@ -28,11 +30,17 @@ struct Provider: IntentTimelineProvider {
         let displayComponent = DateDisplayComponent(timeUnit: configuration.timeUnit)
         var entries: [SimpleEntry] = []
         let currentDate = Date()
-        let dueDate = UserDefaults.appGroup.dueDate
         
-        guard let dueDate = dueDate else {
-            let mockDate = calendar.date(byAdding: .month, value: 9, to: currentDate) ?? currentDate
-            let timeline = Timeline(entries: [SimpleEntry(date: currentDate, dueDate: mockDate, displayComponent: displayComponent, configuration: configuration)], policy: .never)
+        guard let dueDate = UserDefaults.appGroup.dueDate else {
+            let mockDueDate = calendar.date(byAdding: .month, value: 9, to: currentDate) ?? currentDate
+            let timeline = Timeline(entries: [SimpleEntry(date: currentDate, dueDate: mockDueDate, conceptionDate: currentDate, displayComponent: displayComponent, configuration: configuration)], policy: .never)
+            completion(timeline)
+            return
+        }
+        
+        guard let conceptionDate = UserDefaults.appGroup.conceptionDate else {
+            let mockConceptionDate = calendar.date(byAdding: .month, value: -9, to: dueDate) ?? currentDate
+            let timeline = Timeline(entries: [SimpleEntry(date: currentDate, dueDate: dueDate, conceptionDate: mockConceptionDate, displayComponent: displayComponent, configuration: configuration)], policy: .never)
             completion(timeline)
             return
         }
@@ -62,7 +70,7 @@ struct Provider: IntentTimelineProvider {
                 entryDate = calendar.date(byAdding: .month, value: unitOffset, to: currentDate)
             }
             guard let entryDate = entryDate else { continue }
-            let entry = SimpleEntry(date: entryDate, dueDate: dueDate, displayComponent: displayComponent, configuration: configuration)
+            let entry = SimpleEntry(date: entryDate, dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
             entries.append(entry)
         }
 
@@ -76,6 +84,7 @@ struct Provider: IntentTimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let dueDate: Date
+    let conceptionDate: Date
     let displayComponent: DateDisplayComponent
     let configuration: ConfigurationIntent
 }

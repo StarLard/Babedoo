@@ -35,7 +35,7 @@ struct CounterWidgetEntryView : View {
             }
     }
     
-    private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: entry.dueDate, conceptionDate: conceptionDate) }
+    private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: entry.dueDate, conceptionDate: entry.conceptionDate) }
     
     private var value: Int {
         switch entry.configuration.timeValue {
@@ -44,10 +44,6 @@ struct CounterWidgetEntryView : View {
         case .remaining:
             return calculator.remaingValue(from: entry.date, for: entry.displayComponent)
         }
-    }
-    
-    private var conceptionDate: Date {
-        Calendar.current.date(byAdding: .month, value: -9, to: entry.dueDate) ?? entry.dueDate
     }
 }
 
@@ -98,6 +94,7 @@ struct CounterWidget_Previews: PreviewProvider {
             ForEach(0..<2) { index in
                 CounterWidgetEntryView(entry: SimpleEntry(date: .now,
                                                           dueDate: Date.now.addingTimeInterval(50 * 24 * 60 * 60),
+                                                          conceptionDate: Date.now,
                                                           displayComponent: .days,
                                                           configuration: ConfigurationIntent()))
                     .previewContext(contexts[index])
