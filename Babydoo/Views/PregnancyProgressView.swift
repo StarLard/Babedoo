@@ -13,16 +13,18 @@ struct PregnancyProgressView: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            Gauge(value: calculator.progressPercentage(from: now)) {
-                EmptyView()
-            } currentValueLabel: {
-                Text(Int(calculator.progressPercentage(from: now) * 100).formatted(.percent))
+            if #available(iOS 16.0, *) {
+                Gauge(value: calculator.progressPercentage(from: now)) {
+                    EmptyView()
+                } currentValueLabel: {
+                    Text(Int(calculator.progressPercentage(from: now) * 100).formatted(.percent))
+                }
+                .tint(Gradient(colors: [.green, .blue]))
+                .gaugeStyle(.accessoryCircular)
+                .frame(maxWidth: .infinity, minHeight: 64)
+                
+                Divider()
             }
-            .tint(Gradient(colors: [.green, .blue]))
-            .gaugeStyle(.accessoryCircular)
-            .frame(maxWidth: .infinity, minHeight: 64)
-            
-            Divider()
             
             dateComponentView(value: calculator.alongValue(from: now, for: dateDisplayComponent),
                               unit: calculator.alongValue(from: now, for: dateDisplayComponent) == 1

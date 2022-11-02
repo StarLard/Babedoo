@@ -8,6 +8,7 @@
 import SwiftUI
 import WidgetKit
 
+@available(iOSApplicationExtension 16.0, *)
 struct GuageWidgetEntryView : View {
     var entry: Provider.Entry
     
@@ -55,6 +56,15 @@ struct GuageWidget: Widget {
     let kind: String = "GuageWidget"
 
     var body: some WidgetConfiguration {
+        if #available(iOSApplicationExtension 16.0, *) {
+            return mainConfiguration
+        } else {
+            return EmptyWidgetConfiguration()
+        }
+    }
+    
+    @available(iOSApplicationExtension 16.0, *)
+    private var mainConfiguration: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             GuageWidgetEntryView(entry: entry)
         }
@@ -66,6 +76,7 @@ struct GuageWidget: Widget {
     }
 }
 
+@available(iOSApplicationExtension 16.0, *)
 struct GuageWidget_Previews: PreviewProvider {
     static var families = [
         WidgetFamily.accessoryCircular,
@@ -73,11 +84,7 @@ struct GuageWidget_Previews: PreviewProvider {
         .systemSmall,
     ]
     
-    static var contexts = [
-        WidgetPreviewContext(family: .accessoryCircular),
-        WidgetPreviewContext(family: .accessoryRectangular),
-        WidgetPreviewContext(family: .systemSmall),
-    ]
+    static var contexts: [WidgetPreviewContext] { families.map(WidgetPreviewContext.init(family:)) }
     
     static var previews: some View {
         Group {

@@ -60,21 +60,38 @@ struct CounterWidget: Widget {
         }
         .configurationDisplayName("Counter Widget")
         .description("A textual representation of your pregnancy.")
-        .supportedFamilies([.accessoryRectangular,
-                            .systemSmall])
+        .supportedFamilies(supportedFamilies)
+    }
+    
+    private var supportedFamilies: [WidgetFamily] {
+        if #available(iOSApplicationExtension 16.0, *) {
+            return [
+                WidgetFamily.accessoryRectangular,
+                .systemSmall,
+            ]
+        } else {
+            return [
+                WidgetFamily.systemSmall,
+            ]
+        }
     }
 }
 
 struct CounterWidget_Previews: PreviewProvider {
-    static var families = [
-        WidgetFamily.accessoryRectangular,
-        .systemSmall,
-    ]
+    static var families: [WidgetFamily] {
+        if #available(iOSApplicationExtension 16.0, *) {
+            return [
+                WidgetFamily.accessoryRectangular,
+                .systemSmall,
+            ]
+        } else {
+            return [
+                WidgetFamily.systemSmall,
+            ]
+        }
+    }
     
-    static var contexts = [
-        WidgetPreviewContext(family: .accessoryRectangular),
-        WidgetPreviewContext(family: .systemSmall),
-    ]
+    static var contexts: [WidgetPreviewContext] { families.map(WidgetPreviewContext.init(family:)) }
     
     static var previews: some View {
         Group {
