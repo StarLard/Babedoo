@@ -22,6 +22,9 @@ struct DueDateView: View {
     @State
     var isConceptionDateSet: Bool
     
+    @State
+    var isAppInfoPresented = false
+    
     var body: some View {
         List {
             Section {
@@ -40,7 +43,7 @@ struct DueDateView: View {
                 if !isDueDateSet {
                     Text("When are you expecting?")
                 } else if !isConceptionDateSet,
-                          let estimatedConceptionDate = calendar.date(byAdding: .month, value: -9, to: dueDate) {
+                          let estimatedConceptionDate = calendar.date(byAdding: .day, value: -280, to: dueDate) {
                     HStack {
                         Text("When did you conceive?")
                         Spacer()
@@ -59,6 +62,22 @@ struct DueDateView: View {
                 } header: {
                     Text("Progress")
                 }
+            }
+        }
+        .navigationTitle("Hello!")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    withAnimation {
+                        isAppInfoPresented = true
+                    }
+                } label: {
+                    Image(systemName: "info.circle")
+                }
+            }
+        }.sheet(isPresented: $isAppInfoPresented) {
+            NavigationView {
+                AppInfoView()
             }
         }.onChange(of: dueDate) { newValue in
             if !DeploymentEnvironment.isRunningForPreviews {
@@ -103,6 +122,14 @@ struct DueDateView: View {
 
 struct DueDateView_Previews: PreviewProvider {
     static var previews: some View {
-        DueDateView()
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                DueDateView()
+            }
+        } else {
+            NavigationView {
+                DueDateView()
+            }
+        }
     }
 }
