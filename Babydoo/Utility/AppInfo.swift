@@ -14,7 +14,10 @@ import UIKit.UIDevice
 /// Contains plist and process info
 enum AppInfo {
     /// The app's display name
-    static var displayName: String = NSLocalizedString("Babydoo", comment: "The display name for the app")
+    static var displayName: String = NSLocalizedString("Babedoo", comment: "The display name for the app")
+    
+    /// An automatically generated ID assigned to the app by Apple.
+    static var appleID: String = "6443924805"
         
     static var bundleIdentifier: String {
         guard let identifier = Bundle.main.bundleIdentifier else {
@@ -40,8 +43,7 @@ enum AppInfo {
     }
             
     static var appStoreURL: URL {
-        let appStoreID = "6443924805"
-        return URL(string: "itms-apps://itunes.apple.com/us/app/apple-store/id\(appStoreID)?mt=8")!
+        return URL(string: "itms-apps://itunes.apple.com/us/app/apple-store/id\(appleID)?mt=8")!
     }
     
     static var version: AppVersion {
