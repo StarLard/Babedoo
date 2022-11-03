@@ -19,6 +19,9 @@ struct AppInfoView: View {
                 Link(destination: AppInfo.appStoreURL, label: {
                     Label("Rate \(AppInfo.displayName)", systemImage: "suit.heart")
                 })
+                Link(destination: AppInfo.supportURL, label: {
+                    Label("Support", systemImage: "wrench.and.screwdriver")
+                })
                 NavigationLink(destination: PrivacyInfoView(), label: {
                     Label("Privacy", systemImage: "hand.raised")
                 })
