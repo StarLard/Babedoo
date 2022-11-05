@@ -67,5 +67,5 @@ enum AppInfo {
     
     static var marketingURL: URL = URL(string: "https://babedoo.starlard.dev")!
     static var privacyURL: URL = URL(string: "https://babedoo.starlard.dev/privacy")!
-    static var supportURL: URL = URL(string: "https://babedoo.starlard.dev/privacy")!
+    static var supportURL: URL = URL(string: "https://babedoo.starlard.dev/support")!
 }
