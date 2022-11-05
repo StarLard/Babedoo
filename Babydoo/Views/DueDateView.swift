@@ -130,6 +130,7 @@ struct DueDateView_Previews: PreviewProvider {
             NavigationView {
                 DueDateView()
             }
+            .navigationViewStyle(.stack)
         }
     }
 }

@@ -19,6 +19,7 @@ struct BabydooApp: App {
                 NavigationView {
                     DueDateView()
                 }
+                .navigationViewStyle(.stack)
             }
         }
     }
