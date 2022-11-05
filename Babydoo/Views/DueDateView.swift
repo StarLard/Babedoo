@@ -42,17 +42,8 @@ struct DueDateView: View {
             } footer: {
                 if !isDueDateSet {
                     Text("When are you expecting?")
-                } else if !isConceptionDateSet,
-                          let estimatedConceptionDate = calendar.date(byAdding: .day, value: -280, to: dueDate) {
-                    HStack {
-                        Text("When did you conceive?")
-                        Spacer()
-                        Button("Use estimate") {
-                            withAnimation {
-                                conceptionDate = estimatedConceptionDate
-                            }
-                        }
-                    }
+                } else if !isConceptionDateSet {
+                    Text("When did you conceive?")
                 }
             }
             
@@ -86,7 +77,9 @@ struct DueDateView: View {
             }
             withAnimation {
                 isDueDateSet = true
-                isConceptionDateSet = false
+                if let estimatedConceptionDate = calendar.date(byAdding: .day, value: -280, to: dueDate) {
+                    conceptionDate = estimatedConceptionDate
+                }
             }
         }.onChange(of: conceptionDate) { newValue in
             if !DeploymentEnvironment.isRunningForPreviews {
