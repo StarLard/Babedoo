@@ -8,6 +8,7 @@
 import Foundation
 
 struct PregnancyCalculator {
+    static let daysFromConceptionDateToDueDate: Int = 266
     var dueDate: Date
     var conceptionDate: Date
     

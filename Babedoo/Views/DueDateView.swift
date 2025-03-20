@@ -77,7 +77,7 @@ struct DueDateView: View {
             }
             withAnimation {
                 isDueDateSet = true
-                if let estimatedConceptionDate = calendar.date(byAdding: .day, value: -280, to: dueDate) {
+                if let estimatedConceptionDate = calendar.date(byAdding: .day, value: -PregnancyCalculator.daysFromConceptionDateToDueDate, to: dueDate) {
                     conceptionDate = estimatedConceptionDate
                 }
             }
