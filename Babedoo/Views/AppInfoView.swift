@@ -1,6 +1,6 @@
 //
 //  AppInfoView.swift
-//  Babydoo
+//  Babedoo
 //
 //  Created by Caleb Friden on 11/1/22.
 //

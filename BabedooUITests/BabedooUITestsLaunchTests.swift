@@ -1,13 +1,13 @@
 //
-//  BabydooUITestsLaunchTests.swift
-//  BabydooUITests
+//  BabedooUITestsLaunchTests.swift
+//  BabedooUITests
 //
 //  Created by Caleb Friden on 10/19/22.
 //
 
 import XCTest
 
-final class BabydooUITestsLaunchTests: XCTestCase {
+final class BabedooUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

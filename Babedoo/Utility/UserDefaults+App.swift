@@ -1,6 +1,6 @@
 //
 //  UserDefaults+App.swift
-//  Babydoo
+//  Babedoo
 //
 //  Created by Caleb Friden on 10/19/22.
 //
@@ -13,7 +13,7 @@ extension UserDefaults {
         case conceptionDate = "conception-date"
     }
     
-    static let appGroup: UserDefaults = UserDefaults(suiteName: "group.starlard.babydoo") ?? UserDefaults()
+    static let appGroup: UserDefaults = UserDefaults(suiteName: "group.starlard.Babedoo") ?? UserDefaults()
     
     var dueDate: Date? {
         get {
