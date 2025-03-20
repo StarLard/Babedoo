@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Babydoo
+@testable import Babedoo
 
 final class BabydooTests: XCTestCase {
 
