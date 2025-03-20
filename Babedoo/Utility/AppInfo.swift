@@ -14,11 +14,11 @@ import UIKit.UIDevice
 /// Contains plist and process info
 enum AppInfo {
     /// The app's display name
-    static var displayName: String = NSLocalizedString("Babedoo", comment: "The display name for the app")
-    
+    static let displayName: String = NSLocalizedString("Babedoo", comment: "The display name for the app")
+
     /// An automatically generated ID assigned to the app by Apple.
-    static var appleID: String = "6443924805"
-        
+    static let appleID: String = "6443924805"
+
     static var bundleIdentifier: String {
         guard let identifier = Bundle.main.bundleIdentifier else {
             fatalError("Could not determine bundle identifier string from main bundle plist")
@@ -65,7 +65,7 @@ enum AppInfo {
         return image
     }
     
-    static var marketingURL: URL = URL(string: "https://babedoo.starlard.dev")!
-    static var privacyURL: URL = URL(string: "https://babedoo.starlard.dev/privacy")!
-    static var supportURL: URL = URL(string: "https://babedoo.starlard.dev/support")!
+    static let marketingURL: URL = URL(string: "https://babedoo.starlard.dev")!
+    static let privacyURL: URL = URL(string: "https://babedoo.starlard.dev/privacy")!
+    static let supportURL: URL = URL(string: "https://babedoo.starlard.dev/support")!
 }

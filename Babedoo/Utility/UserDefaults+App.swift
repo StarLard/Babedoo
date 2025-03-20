@@ -12,8 +12,9 @@ extension UserDefaults {
         case dueDate = "due-date"
         case conceptionDate = "conception-date"
     }
-    
-    static let appGroup: UserDefaults = UserDefaults(suiteName: "group.starlard.babydoo") ?? UserDefaults()
+
+    // UserDefaults is thread-safe
+    nonisolated(unsafe) static let appGroup: UserDefaults = UserDefaults(suiteName: "group.starlard.babydoo") ?? UserDefaults()
 
     var dueDate: Date? {
         get {
