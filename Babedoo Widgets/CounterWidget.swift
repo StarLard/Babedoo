@@ -13,8 +13,29 @@ struct CounterWidgetEntryView : View {
     
     @Environment(\.widgetFamily)
     var family: WidgetFamily
-    
+
+    @Environment(\.colorScheme)
+    var colorScheme: ColorScheme
+
     var body: some View {
+        if #available(iOSApplicationExtension 17.0, *) {
+            content
+                .containerBackground(for: .widget) {
+                    switch colorScheme {
+                    case .dark:
+                        Color.black
+                    case .light:
+                        Color.white
+                    @unknown default:
+                        Color.white
+                    }
+                }
+        } else {
+            content
+        }
+    }
+
+    var content: some View {
         LinearGradient(colors: [.green, .blue], startPoint: .leading, endPoint: .trailing)
             .mask {
                 HStack(alignment: .lastTextBaseline, spacing: 4) {
