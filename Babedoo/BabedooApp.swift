@@ -1,5 +1,5 @@
 //
-//  BabydooApp.swift
+//  BabedooApp.swift
 //  Babydoo
 //
 //  Created by Caleb Friden on 10/19/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct BabydooApp: App {
+struct BabedooApp: App {
     var body: some Scene {
         WindowGroup {
             if #available(iOS 16.0, *) {
