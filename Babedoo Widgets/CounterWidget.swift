@@ -41,21 +41,20 @@ struct CounterWidgetEntryView : View {
                 HStack(alignment: .lastTextBaseline, spacing: 4) {
                     Text(value.formatted())
                         .font(family == .systemSmall ? .system(size: 52, weight: .semibold) : .title)
-                    
+
                     VStack(alignment: .leading) {
-                        Text(value == 1 ? entry.displayComponent.singularUnit : entry.displayComponent.pluralUnit)
                         switch entry.configuration.timeValue {
                         case .unknown, .progress:
-                            Text("along")
+                            Text("\(entry.displayComponent.unit(for: value))\nalong")
                         case .remaining:
-                            Text("to go")
+                            Text("\(entry.displayComponent.unit(for: value))\nto go")
                         }
                     }
                     .font(family == .systemSmall ? .system(size: 16, weight: .light) : .caption)
                 }
             }
     }
-    
+
     private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: entry.dueDate, conceptionDate: entry.conceptionDate) }
     
     private var value: Int {

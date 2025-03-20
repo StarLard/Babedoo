@@ -17,14 +17,7 @@ struct GuageWidgetEntryView : View {
 
     var body: some View {
         Gauge(value: progressPercentage) {
-            switch entry.displayComponent {
-            case .days:
-                Text(value == 1 ? entry.displayComponent.singularUnit : entry.displayComponent.pluralUnit)
-            case .weeks:
-                Text(value == 1 ? "wk" : "wks")
-            case .months:
-                Text(value == 1 ? "mo" : "mos")
-            }
+            Text(entry.displayComponent.abbreviatedUnit(for: value))
         } currentValueLabel: {
             Text(value.formatted())
         }

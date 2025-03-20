@@ -12,22 +12,22 @@ enum DateDisplayComponent {
     case weeks
     case months
     
-    var singularUnit: String {
+    func unit(for quantity: Int) -> String {
         switch self {
-        case .days: return DateConstant.day
-        case .weeks: return DateConstant.week
-        case .months: return DateConstant.month
+        case .days: return DateConstant.days(quantity)
+        case .weeks: return DateConstant.weeks(quantity)
+        case .months: return DateConstant.months(quantity)
         }
     }
-    
-    var pluralUnit: String {
+
+    func abbreviatedUnit(for quantity: Int) -> String {
         switch self {
-        case .days: return DateConstant.days
-        case .weeks: return DateConstant.weeks
-        case .months: return DateConstant.months
+        case .days: return DateConstant.daysAbbreviation(quantity)
+        case .weeks: return DateConstant.weeksAbbreviation(quantity)
+        case .months: return DateConstant.monthsAbbreviation(quantity)
         }
     }
-    
+
     var next: Self {
         switch self {
         case .days: return .weeks
