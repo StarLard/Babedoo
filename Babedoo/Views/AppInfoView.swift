@@ -54,7 +54,7 @@ struct AppInfoView: View {
                             .font(.subheadline)
                         
                         if isBuildShown {
-                            Text("(\(AppInfo.buildString))")
+                            Text(verbatim: "(\(AppInfo.buildString))")
                                 .font(.caption)
                         }
                     }

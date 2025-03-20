@@ -14,7 +14,7 @@ import UIKit.UIDevice
 /// Contains plist and process info
 enum AppInfo {
     /// The app's display name
-    static let displayName: String = NSLocalizedString("Babedoo", comment: "The display name for the app")
+    static let displayName: String = String(localized: "Babedoo", comment: "The display name for the app")
 
     /// An automatically generated ID assigned to the app by Apple.
     static let appleID: String = "6443924805"

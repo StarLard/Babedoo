@@ -26,19 +26,24 @@ struct PregnancyProgressView: View {
                 Divider()
             }
             
-            dateComponentView(value: calculator.alongValue(from: now, for: dateDisplayComponent),
-                              unit: calculator.alongValue(from: now, for: dateDisplayComponent) == 1
-                              ? dateDisplayComponent.singularUnit
-                              : dateDisplayComponent.pluralUnit,
-                              suffix: "along")
-            
+            dateComponentView(
+                value: calculator.alongValue(
+                    from: now,
+                    for: dateDisplayComponent
+                ),
+                dateDisplayComponent: dateDisplayComponent,
+                suffix: String(localized: "along", comment: "Suffix for a date label")
+            )
+
             Divider()
             
-            dateComponentView(value: calculator.remaingValue(from: now, for: dateDisplayComponent),
-                              unit: calculator.remaingValue(from: now, for: dateDisplayComponent) == 1
-                              ? dateDisplayComponent.singularUnit
-                              : dateDisplayComponent.pluralUnit,
-                              suffix: "to go")
+            dateComponentView(
+                value: calculator.remaingValue(
+                    from: now, for: dateDisplayComponent
+                ),
+                dateDisplayComponent: dateDisplayComponent,
+                suffix: String(localized: "to go", comment: "Suffix for a date label")
+            )
         }
         .contentShape(Rectangle())
         .onTapGesture {
@@ -54,15 +59,14 @@ struct PregnancyProgressView: View {
     private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: dueDate, conceptionDate: conceptionDate) }
     
     private func dateComponentView(value: Int,
-                                   unit: String,
-                                   suffix: LocalizedStringKey) -> some View {
+                                   dateDisplayComponent: DateDisplayComponent,
+                                   suffix: String) -> some View {
         HStack(alignment: .lastTextBaseline, spacing: 4) {
             Text(value.formatted())
                 .font(.title)
             
             VStack(alignment: .leading) {
-                Text(unit)
-                Text(suffix)
+                Text("\(dateDisplayComponent.unit(for: value))\n\(suffix)")
             }
             .font(.caption)
         }

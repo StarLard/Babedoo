@@ -1,11 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@\nalong" : {
-
-    },
-    "%@\nto go" : {
-
+    "%@\n%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@\n%2$@"
+          }
+        }
+      }
     },
     "%lld day(s)" : {
       "comment" : "Label for an abbreviated day unit\nLabel for day unit",
@@ -172,16 +176,49 @@
         }
       }
     },
-    "A textual representation of your pregnancy." : {
+    "About" : {
 
     },
-    "A visual representation of your pregnancy." : {
+    "along" : {
+      "comment" : "Suffix for a date label"
+    },
+    "Babedoo" : {
+      "comment" : "The display name for the app"
+    },
+    "Conception Date" : {
 
     },
-    "Counter Widget" : {
+    "Copy" : {
 
     },
-    "Progress Widget" : {
+    "Done" : {
+
+    },
+    "Due Date" : {
+
+    },
+    "Hello!" : {
+
+    },
+    "Privacy" : {
+
+    },
+    "Progress" : {
+
+    },
+    "Rate %@" : {
+
+    },
+    "Support" : {
+
+    },
+    "to go" : {
+      "comment" : "Suffix for a date label"
+    },
+    "When are you expecting?" : {
+
+    },
+    "When did you conceive?" : {
 
     }
   },
