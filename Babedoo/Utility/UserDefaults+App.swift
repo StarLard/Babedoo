@@ -13,8 +13,8 @@ extension UserDefaults {
         case conceptionDate = "conception-date"
     }
     
-    static let appGroup: UserDefaults = UserDefaults(suiteName: "group.starlard.Babedoo") ?? UserDefaults()
-    
+    static let appGroup: UserDefaults = UserDefaults(suiteName: "group.starlard.babydoo") ?? UserDefaults()
+
     var dueDate: Date? {
         get {
             date(forKey: .dueDate)
