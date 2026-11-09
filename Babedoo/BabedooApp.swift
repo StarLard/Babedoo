@@ -11,15 +11,8 @@ import SwiftUI
 struct BabedooApp: App {
     var body: some Scene {
         WindowGroup {
-            if #available(iOS 16.0, *) {
-                NavigationStack {
-                    DueDateView()
-                }
-            } else {
-                NavigationView {
-                    DueDateView()
-                }
-                .navigationViewStyle(.stack)
+            NavigationStack {
+                DueDateView()
             }
         }
     }

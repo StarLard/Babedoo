@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StarLardCoreKit
 import WidgetKit
 import Intents
 
@@ -13,23 +14,23 @@ struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         let configuration = ConfigurationIntent()
         let displayComponent = DateDisplayComponent(timeUnit: configuration.timeUnit)
-        let dueDate = UserDefaults.appGroup.dueDate ?? calendar.date(byAdding: .day, value: PregnancyCalculator.daysFromConceptionDateToDueDate, to: .now) ?? .now
-        let conceptionDate = UserDefaults.appGroup.conceptionDate ?? .now
-        return SimpleEntry(date: Date(), dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
+        let dueDate = UserDefaults.appGroup.dueDate ?? calendar.date(byAdding: .day, value: PregnancyCalculator.daysFromConceptionDateToDueDate, to: .current) ?? .current
+        let conceptionDate = UserDefaults.appGroup.conceptionDate ?? .current
+        return SimpleEntry(date: Date.current, dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let displayComponent = DateDisplayComponent(timeUnit: configuration.timeUnit)
-        let dueDate = UserDefaults.appGroup.dueDate ?? calendar.date(byAdding: .day, value: PregnancyCalculator.daysFromConceptionDateToDueDate, to: .now) ?? .now
-        let conceptionDate = UserDefaults.appGroup.conceptionDate ?? .now
-        let entry = SimpleEntry(date: Date(), dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
+        let dueDate = UserDefaults.appGroup.dueDate ?? calendar.date(byAdding: .day, value: PregnancyCalculator.daysFromConceptionDateToDueDate, to: .current) ?? .current
+        let conceptionDate = UserDefaults.appGroup.conceptionDate ?? .current
+        let entry = SimpleEntry(date: Date.current, dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
         let displayComponent = DateDisplayComponent(timeUnit: configuration.timeUnit)
         var entries: [SimpleEntry] = []
-        let currentDate = Date()
+        let currentDate = Date.current
         
         guard let dueDate = UserDefaults.appGroup.dueDate else {
             let mockDueDate = calendar.date(byAdding: .day, value: PregnancyCalculator.daysFromConceptionDateToDueDate, to: currentDate) ?? currentDate
@@ -45,39 +46,28 @@ struct Provider: IntentTimelineProvider {
             return
         }
 
-        // Refresh widget once per date interval.
-        let unitsRemaining: Int
-        switch displayComponent {
-        case .days:
-            let components = calendar.dateComponents([.day], from: currentDate, to: dueDate)
-            unitsRemaining = components.day ?? 0
-        case .weeks:
-            let components = calendar.dateComponents([.weekOfYear], from: currentDate, to: dueDate)
-            unitsRemaining = components.weekOfYear ?? 0
-        case .months:
-            let components = calendar.dateComponents([.month], from: currentDate, to: dueDate)
-            unitsRemaining = components.month ?? 0
-        }
-        
-        for unitOffset in 0..<unitsRemaining {
-            let entryDate: Date?
-            switch displayComponent {
-            case .days:
-                entryDate = calendar.date(byAdding: .day, value: unitOffset, to: currentDate)
-            case .weeks:
-                entryDate = calendar.date(byAdding: .weekOfYear, value: unitOffset, to: currentDate)
-            case .months:
-                entryDate = calendar.date(byAdding: .month, value: unitOffset, to: currentDate)
-            }
-            guard let entryDate = entryDate else { continue }
-            let entry = SimpleEntry(date: entryDate, dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration)
-            entries.append(entry)
+        // The displayed value changes at whole-unit boundaries measured from the conception date
+        // ("along") and from the due date ("to go") — not from when this timeline was generated.
+        // Schedule an entry exactly at each of those boundaries so the widget flips on time.
+        let upcoming = PregnancyCalculator(dueDate: dueDate, conceptionDate: conceptionDate)
+            .valueChangeDates(after: currentDate, for: displayComponent, limit: Self.maxEntries)
+
+        entries.append(SimpleEntry(date: currentDate, dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration))
+        for entryDate in upcoming {
+            entries.append(SimpleEntry(date: entryDate, dueDate: dueDate, conceptionDate: conceptionDate, displayComponent: displayComponent, configuration: configuration))
         }
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        // Ask for a fresh timeline after the last scheduled boundary, or tomorrow if there are none
+        // (e.g. past the due date), so the widget never stops updating.
+        let refreshDate = upcoming.last
+            ?? calendar.date(byAdding: .day, value: 1, to: currentDate)
+            ?? currentDate.addingTimeInterval(24 * 60 * 60)
+        let timeline = Timeline(entries: entries, policy: .after(refreshDate))
         completion(timeline)
     }
-    
+
+    private static let maxEntries = 100
+
     let calendar = Calendar.current
 }
 

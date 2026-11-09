@@ -11,6 +11,9 @@
         }
       }
     },
+    "%@ and its developer take your privacy very seriously. %@ does not collect any data about you. Ever. To learn more, read our %@." : {
+      "comment" : "Privacy statement; the first two placeholders are the app name and the last is a link to the privacy policy"
+    },
     "%lld day(s)" : {
       "comment" : "Label for an abbreviated day unit\nLabel for day unit",
       "localizations" : {
@@ -191,6 +194,9 @@
     "Copy" : {
 
     },
+    "Copyright © 2022-%@ Caleb Friden. All rights reserved." : {
+      "comment" : "Copyright notice; the placeholder is the current year"
+    },
     "Done" : {
 
     },
@@ -202,6 +208,9 @@
     },
     "Privacy" : {
 
+    },
+    "privacy policy" : {
+      "comment" : "Link text to the privacy policy, used in the privacy statement"
     },
     "Progress" : {
 

@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import StarLardCoreKit
 import WidgetKit
 
-@available(iOSApplicationExtension 16.0, *)
 struct GuageWidgetEntryView : View {
     var entry: Provider.Entry
     
@@ -45,15 +45,6 @@ struct GuageWidget: Widget {
     let kind: String = "GuageWidget"
 
     var body: some WidgetConfiguration {
-        if #available(iOSApplicationExtension 16.0, *) {
-            return mainConfiguration
-        } else {
-            return EmptyWidgetConfiguration()
-        }
-    }
-    
-    @available(iOSApplicationExtension 16.0, *)
-    private var mainConfiguration: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             GuageWidgetEntryView(entry: entry)
         }
@@ -64,7 +55,6 @@ struct GuageWidget: Widget {
     }
 }
 
-@available(iOSApplicationExtension 16.0, *)
 struct GuageWidget_Previews: PreviewProvider {
     static var families = [
         WidgetFamily.accessoryCircular,
@@ -75,10 +65,10 @@ struct GuageWidget_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            ForEach(0..<3) { index in
-                GuageWidgetEntryView(entry: SimpleEntry(date: .now,
-                                                        dueDate: Date.now.addingTimeInterval(50 * 24 * 60 * 60),
-                                                        conceptionDate: Date.now.addingTimeInterval(-50 * 24 * 60 * 60),
+            ForEach(families.indices, id: \.self) { index in
+                GuageWidgetEntryView(entry: SimpleEntry(date: .current,
+                                                        dueDate: Date.current.addingTimeInterval(50 * 24 * 60 * 60),
+                                                        conceptionDate: Date.current.addingTimeInterval(-50 * 24 * 60 * 60),
                                                         displayComponent: .weeks,
                                                         configuration: ConfigurationIntent()))
                     .previewContext(contexts[index])

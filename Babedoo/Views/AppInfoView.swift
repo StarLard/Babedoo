@@ -65,7 +65,7 @@ struct AppInfoView: View {
                     }
                     .contextMenu {
                             Button(action: {
-                                UIPasteboard.general.string = "\(AppInfo.version.description) (\(AppInfo.buildString)"
+                                UIPasteboard.general.string = "\(AppInfo.version.description) (\(AppInfo.buildString))"
                             }) {
                                 Text("Copy")
                                 Image(systemName: "doc.on.doc")

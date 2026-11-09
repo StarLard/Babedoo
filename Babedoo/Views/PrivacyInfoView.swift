@@ -10,22 +10,25 @@ import SwiftUI
 struct PrivacyInfoView: View {
     var body: some View {
         List {
-            Text(.init("\(AppInfo.displayName) and its developer take your privacy very seriously. \(AppInfo.displayName) does not collect any data about you. Ever. To learn more, read our [privacy policy](\(AppInfo.privacyURL))."))
+            Text(Self.privacyStatement)
         }
         .navigationTitle("Privacy")
+    }
+
+    static var privacyStatement: AttributedString {
+        var privacyPolicy = AttributedString(localized: "privacy policy", comment: "Link text to the privacy policy, used in the privacy statement")
+        privacyPolicy.link = AppInfo.privacyURL
+        return AttributedString(
+            localized: "\(AppInfo.displayName) and its developer take your privacy very seriously. \(AppInfo.displayName) does not collect any data about you. Ever. To learn more, read our \(privacyPolicy).",
+            comment: "Privacy statement; the first two placeholders are the app name and the last is a link to the privacy policy"
+        )
     }
 }
 
 struct PrivacyInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                PrivacyInfoView()
-            }
-        } else {
-            NavigationView {
-                PrivacyInfoView()
-            }
+        NavigationStack {
+            PrivacyInfoView()
         }
     }
 }

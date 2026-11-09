@@ -5,11 +5,9 @@
 //  Created by Caleb Friden on 11/1/22.
 //
 
-import StarLardKit
+import StarLardCoreKit
 import Foundation
-#if canImport(UIKit)
 import UIKit.UIDevice
-#endif
 
 /// Contains plist and process info
 enum AppInfo {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StarLardCoreKit
 import WidgetKit
 
 struct CounterWidgetEntryView : View {
@@ -18,21 +19,17 @@ struct CounterWidgetEntryView : View {
     var colorScheme: ColorScheme
 
     var body: some View {
-        if #available(iOSApplicationExtension 17.0, *) {
-            content
-                .containerBackground(for: .widget) {
-                    switch colorScheme {
-                    case .dark:
-                        Color.black
-                    case .light:
-                        Color.white
-                    @unknown default:
-                        Color.white
-                    }
+        content
+            .containerBackground(for: .widget) {
+                switch colorScheme {
+                case .dark:
+                    Color.black
+                case .light:
+                    Color.white
+                @unknown default:
+                    Color.white
                 }
-        } else {
-            content
-        }
+            }
     }
 
     var content: some View {
@@ -79,42 +76,26 @@ struct CounterWidget: Widget {
         .supportedFamilies(supportedFamilies)
     }
     
-    private var supportedFamilies: [WidgetFamily] {
-        if #available(iOSApplicationExtension 16.0, *) {
-            return [
-                WidgetFamily.accessoryRectangular,
-                .systemSmall,
-            ]
-        } else {
-            return [
-                WidgetFamily.systemSmall,
-            ]
-        }
-    }
+    private let supportedFamilies: [WidgetFamily] = [
+        .accessoryRectangular,
+        .systemSmall,
+    ]
 }
 
 struct CounterWidget_Previews: PreviewProvider {
-    static var families: [WidgetFamily] {
-        if #available(iOSApplicationExtension 16.0, *) {
-            return [
-                WidgetFamily.accessoryRectangular,
-                .systemSmall,
-            ]
-        } else {
-            return [
-                WidgetFamily.systemSmall,
-            ]
-        }
-    }
+    static let families: [WidgetFamily] = [
+        .accessoryRectangular,
+        .systemSmall,
+    ]
     
     static var contexts: [WidgetPreviewContext] { families.map(WidgetPreviewContext.init(family:)) }
     
     static var previews: some View {
         Group {
             ForEach(0..<2) { index in
-                CounterWidgetEntryView(entry: SimpleEntry(date: .now,
-                                                          dueDate: Date.now.addingTimeInterval(50 * 24 * 60 * 60),
-                                                          conceptionDate: Date.now,
+                CounterWidgetEntryView(entry: SimpleEntry(date: .current,
+                                                          dueDate: Date.current.addingTimeInterval(50 * 24 * 60 * 60),
+                                                          conceptionDate: Date.current,
                                                           displayComponent: .days,
                                                           configuration: ConfigurationIntent()))
                     .previewContext(contexts[index])

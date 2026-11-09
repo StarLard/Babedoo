@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StarLardKit
+import StarLardCoreKit
 import WidgetKit
 
 struct DueDateView: View {
@@ -71,7 +71,7 @@ struct DueDateView: View {
                 AppInfoView()
             }
         }.onChange(of: dueDate) { newValue in
-            if !DeploymentEnvironment.isRunningForPreviews {
+            if !ProcessInfo.processInfo.isRunningForPreviews {
                 userDefaults.dueDate = newValue
                 WidgetCenter.shared.reloadAllTimelines()
             }
@@ -82,7 +82,7 @@ struct DueDateView: View {
                 }
             }
         }.onChange(of: conceptionDate) { newValue in
-            if !DeploymentEnvironment.isRunningForPreviews {
+            if !ProcessInfo.processInfo.isRunningForPreviews {
                 userDefaults.conceptionDate = newValue
                 WidgetCenter.shared.reloadAllTimelines()
             }
@@ -93,8 +93,8 @@ struct DueDateView: View {
     }
     
     init() {
-        let now = Date.now
-        if DeploymentEnvironment.isRunningForPreviews {
+        let now = Date.current
+        if ProcessInfo.processInfo.isRunningForPreviews {
             _dueDate = State(initialValue: now)
             _isDueDateSet = State(initialValue: false)
             _conceptionDate = State(initialValue: now)
@@ -115,15 +115,8 @@ struct DueDateView: View {
 
 struct DueDateView_Previews: PreviewProvider {
     static var previews: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                DueDateView()
-            }
-        } else {
-            NavigationView {
-                DueDateView()
-            }
-            .navigationViewStyle(.stack)
+        NavigationStack {
+            DueDateView()
         }
     }
 }

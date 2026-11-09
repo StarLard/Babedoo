@@ -1,0 +1,51 @@
+{
+  "originHash" : "02a91094ee55e4db6e705ccbd3a5c6ae2a8b01f6ed3bb727bb9108dc5a1afa80",
+  "pins" : [
+    {
+      "identity" : "sentry-apple-swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsentry/sentry-apple-swift-log.git",
+      "state" : {
+        "revision" : "1b7160216e57d15a4237cf0100efc962d43c572a",
+        "version" : "9.31.0"
+      }
+    },
+    {
+      "identity" : "sentry-cocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsentry/sentry-cocoa.git",
+      "state" : {
+        "revision" : "2f64c77f77514acd01780d1aac86ae75b7fccd04",
+        "version" : "9.31.0"
+      }
+    },
+    {
+      "identity" : "starlardkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StarLard/StarLardKit.git",
+      "state" : {
+        "revision" : "95b22fba5a692d9206671c7fe12cb0936a78234b",
+        "version" : "4.2.1"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "c9c6bb9d275ec0d95c3ad16391f3f045dc623104",
+        "version" : "1.16.2"
+      }
+    },
+    {
+      "identity" : "swiftsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TelemetryDeck/SwiftSDK.git",
+      "state" : {
+        "revision" : "58f436299d3f6710bcedc18aff26480aaf1879fc",
+        "version" : "2.14.2"
+      }
+    }
+  ],
+  "version" : 3
+}

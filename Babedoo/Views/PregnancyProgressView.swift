@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StarLardCoreKit
 
 struct PregnancyProgressView: View {
     var dueDate: Date
@@ -13,18 +14,16 @@ struct PregnancyProgressView: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            if #available(iOS 16.0, *) {
-                Gauge(value: calculator.progressPercentage(from: now)) {
-                    EmptyView()
-                } currentValueLabel: {
-                    Text(Int(calculator.progressPercentage(from: now) * 100).formatted(.percent))
-                }
-                .tint(Gradient(colors: [.green, .blue]))
-                .gaugeStyle(.accessoryCircular)
-                .frame(maxWidth: .infinity, minHeight: 64)
-                
-                Divider()
+            Gauge(value: calculator.progressPercentage(from: now)) {
+                EmptyView()
+            } currentValueLabel: {
+                Text(Int(calculator.progressPercentage(from: now) * 100).formatted(.percent))
             }
+            .tint(Gradient(colors: [.green, .blue]))
+            .gaugeStyle(.accessoryCircular)
+            .frame(maxWidth: .infinity, minHeight: 64)
+
+            Divider()
             
             dateComponentView(
                 value: calculator.alongValue(
@@ -55,7 +54,7 @@ struct PregnancyProgressView: View {
     
     @State
     private var dateDisplayComponent: DateDisplayComponent = .weeks
-    private let now = Date.now
+    private let now = Date.current
     private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: dueDate, conceptionDate: conceptionDate) }
     
     private func dateComponentView(value: Int,
@@ -77,7 +76,7 @@ struct PregnancyProgressView: View {
 struct PregnancyProgressView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            PregnancyProgressView(dueDate: .now.addingTimeInterval(50 * 24 * 60 * 60), conceptionDate: .now.addingTimeInterval(-40 * 24 * 60 * 60))
+            PregnancyProgressView(dueDate: .current.addingTimeInterval(50 * 24 * 60 * 60), conceptionDate: .current.addingTimeInterval(-40 * 24 * 60 * 60))
         }
     }
 }
