@@ -7,6 +7,50 @@
     "%@\nto go" : {
 
     },
+    "%@ %@ along" : {
+      "comment" : "Accessibility label for the counter widget; placeholders are the value and unit",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ along"
+          }
+        }
+      }
+    },
+    "%@ %@ to go" : {
+      "comment" : "Accessibility label for the counter widget; placeholders are the value and unit",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ to go"
+          }
+        }
+      }
+    },
+    "%@ complete, %@ %@ along" : {
+      "comment" : "Accessibility value for the progress widget; placeholders are the percent complete, the value, and the unit",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ complete, %2$@ %3$@ along"
+          }
+        }
+      }
+    },
+    "%@ complete, %@ %@ to go" : {
+      "comment" : "Accessibility value for the progress widget; placeholders are the percent complete, the value, and the unit",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ complete, %2$@ %3$@ to go"
+          }
+        }
+      }
+    },
     "%lld day(s)" : {
       "comment" : "Label for an abbreviated day unit\nLabel for day unit",
       "localizations" : {
@@ -180,6 +224,9 @@
     },
     "Counter Widget" : {
 
+    },
+    "Pregnancy progress" : {
+      "comment" : "Accessibility label for the progress widget"
     },
     "Progress Widget" : {
 

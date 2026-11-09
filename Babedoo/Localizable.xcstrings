@@ -14,6 +14,17 @@
     "%@ and its developer take your privacy very seriously. %@ does not collect any data about you. Ever. To learn more, read our %@." : {
       "comment" : "Privacy statement; the first two placeholders are the app name and the last is a link to the privacy policy"
     },
+    "%@ complete, %@ %@ along, %@ %@ to go" : {
+      "comment" : "Accessibility value for the progress summary; placeholders are the percent complete, the time along, and the time remaining",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ complete, %2$@ %3$@ along, %4$@ %5$@ to go"
+          }
+        }
+      }
+    },
     "%lld day(s)" : {
       "comment" : "Label for an abbreviated day unit\nLabel for day unit",
       "localizations" : {
@@ -188,6 +199,9 @@
     "Babedoo" : {
       "comment" : "The display name for the app"
     },
+    "Changes the unit of time" : {
+      "comment" : "Accessibility hint for the progress summary"
+    },
     "Conception Date" : {
 
     },
@@ -206,6 +220,9 @@
     "Hello!" : {
 
     },
+    "Pregnancy progress" : {
+      "comment" : "Accessibility label for the progress summary"
+    },
     "Privacy" : {
 
     },
@@ -223,6 +240,17 @@
     },
     "to go" : {
       "comment" : "Suffix for a date label"
+    },
+    "Version %@, build %@" : {
+      "comment" : "Accessibility label for the app version; placeholders are the version and build number",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version %1$@, build %2$@"
+          }
+        }
+      }
     },
     "When are you expecting?" : {
 

@@ -13,11 +13,16 @@ struct PregnancyProgressView: View {
     var conceptionDate: Date
     
     var body: some View {
-        HStack(alignment: .center) {
-            Gauge(value: calculator.progressPercentage(from: now)) {
+        // Stack vertically at accessibility text sizes so the values have room to grow.
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(spacing: 12))
+            : AnyLayout(HStackLayout(alignment: .center))
+
+        layout {
+            Gauge(value: progressPercentage) {
                 EmptyView()
             } currentValueLabel: {
-                Text(Int(calculator.progressPercentage(from: now) * 100).formatted(.percent))
+                Text(percentText)
             }
             .tint(Gradient(colors: [.green, .blue]))
             .gaugeStyle(.accessoryCircular)
@@ -26,10 +31,7 @@ struct PregnancyProgressView: View {
             Divider()
             
             dateComponentView(
-                value: calculator.alongValue(
-                    from: now,
-                    for: dateDisplayComponent
-                ),
+                value: alongValue,
                 dateDisplayComponent: dateDisplayComponent,
                 suffix: String(localized: "along", comment: "Suffix for a date label")
             )
@@ -37,9 +39,7 @@ struct PregnancyProgressView: View {
             Divider()
             
             dateComponentView(
-                value: calculator.remaingValue(
-                    from: now, for: dateDisplayComponent
-                ),
+                value: remainingValue,
                 dateDisplayComponent: dateDisplayComponent,
                 suffix: String(localized: "to go", comment: "Suffix for a date label")
             )
@@ -50,12 +50,27 @@ struct PregnancyProgressView: View {
                 dateDisplayComponent = dateDisplayComponent.next
             }
         }
+        // Present the whole row to VoiceOver as one button that reads every value.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("Pregnancy progress", comment: "Accessibility label for the progress summary"))
+        .accessibilityValue(Text(
+            "\(percentText) complete, \(alongValue.formatted()) \(dateDisplayComponent.unit(for: alongValue)) along, \(remainingValue.formatted()) \(dateDisplayComponent.unit(for: remainingValue)) to go",
+            comment: "Accessibility value for the progress summary; placeholders are the percent complete, the time along, and the time remaining"
+        ))
+        .accessibilityHint(Text("Changes the unit of time", comment: "Accessibility hint for the progress summary"))
+        .accessibilityAddTraits(.isButton)
     }
     
+    @Environment(\.dynamicTypeSize)
+    private var dynamicTypeSize
     @State
     private var dateDisplayComponent: DateDisplayComponent = .weeks
     private let now = Date.current
     private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: dueDate, conceptionDate: conceptionDate) }
+    private var progressPercentage: Double { calculator.progressPercentage(from: now) }
+    private var percentText: String { Int(progressPercentage * 100).formatted(.percent) }
+    private var alongValue: Int { calculator.alongValue(from: now, for: dateDisplayComponent) }
+    private var remainingValue: Int { calculator.remaingValue(from: now, for: dateDisplayComponent) }
     
     private func dateComponentView(value: Int,
                                    dateDisplayComponent: DateDisplayComponent,

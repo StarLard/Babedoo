@@ -52,6 +52,7 @@ struct DueDateView: View {
                     PregnancyProgressView(dueDate: dueDate, conceptionDate: conceptionDate)
                 } header: {
                     Text("Progress")
+                        .accessibilityAddTraits(.isHeader)
                 }
             }
         }
@@ -65,12 +66,13 @@ struct DueDateView: View {
                 } label: {
                     Image(systemName: "info.circle")
                 }
+                .accessibilityLabel("About")
             }
         }.sheet(isPresented: $isAppInfoPresented) {
             NavigationView {
                 AppInfoView()
             }
-        }.onChange(of: dueDate) { newValue in
+        }.onChange(of: dueDate) { _, newValue in
             if !ProcessInfo.processInfo.isRunningForPreviews {
                 userDefaults.dueDate = newValue
                 WidgetCenter.shared.reloadAllTimelines()
@@ -81,7 +83,7 @@ struct DueDateView: View {
                     conceptionDate = estimatedConceptionDate
                 }
             }
-        }.onChange(of: conceptionDate) { newValue in
+        }.onChange(of: conceptionDate) { _, newValue in
             if !ProcessInfo.processInfo.isRunningForPreviews {
                 userDefaults.conceptionDate = newValue
                 WidgetCenter.shared.reloadAllTimelines()

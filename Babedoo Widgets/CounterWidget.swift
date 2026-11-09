@@ -37,7 +37,9 @@ struct CounterWidgetEntryView : View {
             .mask {
                 HStack(alignment: .lastTextBaseline, spacing: 4) {
                     Text(value.formatted())
-                        .font(family == .systemSmall ? .system(size: 52, weight: .semibold) : .title)
+                        .font(family == .systemSmall ? .system(size: valueFontSize, weight: .semibold) : .title)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
 
                     VStack(alignment: .leading) {
                         switch entry.configuration.timeValue {
@@ -47,9 +49,29 @@ struct CounterWidgetEntryView : View {
                             Text("\(entry.displayComponent.unit(for: value))\nto go")
                         }
                     }
-                    .font(family == .systemSmall ? .system(size: 16, weight: .light) : .caption)
+                    .font(family == .systemSmall ? .system(size: unitFontSize, weight: .light) : .caption)
+                    .minimumScaleFactor(0.5)
                 }
             }
+            // Content inside a mask isn't exposed to VoiceOver, so describe it here.
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(accessibilityLabel)
+    }
+
+    /// Scales with Dynamic Type, relative to the closest text styles.
+    @ScaledMetric(relativeTo: .largeTitle)
+    private var valueFontSize: CGFloat = 52
+    @ScaledMetric(relativeTo: .callout)
+    private var unitFontSize: CGFloat = 16
+
+    private var accessibilityLabel: Text {
+        let unit = entry.displayComponent.unit(for: value)
+        switch entry.configuration.timeValue {
+        case .unknown, .progress:
+            return Text("\(value.formatted()) \(unit) along", comment: "Accessibility label for the counter widget; placeholders are the value and unit")
+        case .remaining:
+            return Text("\(value.formatted()) \(unit) to go", comment: "Accessibility label for the counter widget; placeholders are the value and unit")
+        }
     }
 
     private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: entry.dueDate, conceptionDate: entry.conceptionDate) }

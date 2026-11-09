@@ -44,6 +44,7 @@ struct AppInfoView: View {
                 Image(uiImage: AppInfo.icon)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .aspectRatio(contentMode: .fit)
+                    .accessibilityHidden(true)
                 
                 VStack(alignment: .leading, content: {
                     Text(AppInfo.displayName)
@@ -71,6 +72,12 @@ struct AppInfoView: View {
                                 Image(systemName: "doc.on.doc")
                             }
                          }
+                    // VoiceOver always reads the build number and offers Copy as an action.
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel(Text("Version \(AppInfo.version.description), build \(AppInfo.buildString)", comment: "Accessibility label for the app version; placeholders are the version and build number"))
+                    .accessibilityAction(named: Text("Copy")) {
+                        UIPasteboard.general.string = "\(AppInfo.version.description) (\(AppInfo.buildString))"
+                    }
                 })
             }
             .padding(.vertical)
