@@ -41,7 +41,7 @@ enum AppInfo {
     }
             
     static var appStoreURL: URL {
-        return URL(string: "itms-apps://itunes.apple.com/us/app/apple-store/id\(appleID)?mt=8")!
+        return URL(string: "https://apps.apple.com/us/app/babedoo/\(appleID)")!
     }
     
     static var version: AppVersion {
