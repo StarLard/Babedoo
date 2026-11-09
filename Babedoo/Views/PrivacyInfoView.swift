@@ -15,7 +15,7 @@ struct PrivacyInfoView: View {
         .navigationTitle("Privacy")
     }
 
-    static var privacyStatement: AttributedString {
+    nonisolated static var privacyStatement: AttributedString {
         var privacyPolicy = AttributedString(localized: "privacy policy", comment: "Link text to the privacy policy, used in the privacy statement")
         privacyPolicy.link = AppInfo.privacyURL
         return AttributedString(
