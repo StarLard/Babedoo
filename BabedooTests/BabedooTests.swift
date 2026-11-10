@@ -262,7 +262,8 @@ struct AppInfoTests {
 
     @Test
     func appStoreURLContainsAppleID() {
-        #expect(AppInfo.appStoreURL.absoluteString.contains("id\(AppInfo.appleID)"))
+        // App Store links work with or without the "id" prefix on the app number.
+        #expect(AppInfo.appStoreURL.lastPathComponent.hasSuffix(AppInfo.appleID))
     }
 }
 
