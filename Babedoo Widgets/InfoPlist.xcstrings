@@ -1,0 +1,114 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Bundle display name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Babedoo-Widgets"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Babedoo Widgets"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Widgets de Babedoo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Widgets Babedoo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Babedooウィジェット"
+          }
+        }
+      }
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Babedoo WidgetsExtension"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Babedoo WidgetsExtension"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Babedoo WidgetsExtension"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Babedoo WidgetsExtension"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Babedoo WidgetsExtension"
+          }
+        }
+      }
+    },
+    "NSHumanReadableCopyright" : {
+      "comment" : "Copyright (human-readable)",
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : ""
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : ""
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : ""
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.3"
+}

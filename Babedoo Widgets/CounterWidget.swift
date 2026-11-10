@@ -42,12 +42,7 @@ struct CounterWidgetEntryView : View {
                         .minimumScaleFactor(0.5)
 
                     VStack(alignment: .leading) {
-                        switch entry.configuration.timeValue {
-                        case .unknown, .progress:
-                            Text("\(entry.displayComponent.unit(for: value))\nalong")
-                        case .remaining:
-                            Text("\(entry.displayComponent.unit(for: value))\nto go")
-                        }
+                        Text(entry.displayComponent.caption(for: value, direction: direction))
                     }
                     .font(family == .systemSmall ? .system(size: unitFontSize, weight: .light) : .caption)
                     .minimumScaleFactor(0.5)
@@ -55,7 +50,7 @@ struct CounterWidgetEntryView : View {
             }
             // Content inside a mask isn't exposed to VoiceOver, so describe it here.
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel(accessibilityLabel)
+            .accessibilityLabel(entry.displayComponent.phrase(for: value, direction: direction))
     }
 
     /// Scales with Dynamic Type, relative to the closest text styles.
@@ -64,13 +59,12 @@ struct CounterWidgetEntryView : View {
     @ScaledMetric(relativeTo: .callout)
     private var unitFontSize: CGFloat = 16
 
-    private var accessibilityLabel: Text {
-        let unit = entry.displayComponent.unit(for: value)
+    private var direction: TimeDirection {
         switch entry.configuration.timeValue {
         case .unknown, .progress:
-            return Text("\(value.formatted()) \(unit) along", comment: "Accessibility label for the counter widget; placeholders are the value and unit")
+            return .along
         case .remaining:
-            return Text("\(value.formatted()) \(unit) to go", comment: "Accessibility label for the counter widget; placeholders are the value and unit")
+            return .remaining
         }
     }
 

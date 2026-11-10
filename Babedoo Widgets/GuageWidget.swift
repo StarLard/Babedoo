@@ -31,13 +31,15 @@ struct GuageWidgetEntryView : View {
 
     private var accessibilityValue: Text {
         let percent = Int(progressPercentage * 100).formatted(.percent)
-        let unit = entry.displayComponent.unit(for: value)
+        let direction: TimeDirection
         switch entry.configuration.timeValue {
         case .unknown, .progress:
-            return Text("\(percent) complete, \(value.formatted()) \(unit) along", comment: "Accessibility value for the progress widget; placeholders are the percent complete, the value, and the unit")
+            direction = .along
         case .remaining:
-            return Text("\(percent) complete, \(value.formatted()) \(unit) to go", comment: "Accessibility value for the progress widget; placeholders are the percent complete, the value, and the unit")
+            direction = .remaining
         }
+        let phrase = entry.displayComponent.phrase(for: value, direction: direction)
+        return Text("\(percent) complete, \(phrase)", comment: "Accessibility value for the progress widget; placeholders are the percent complete and the time along or remaining (e.g. \"12 weeks along\")")
     }
     
     private var calculator: PregnancyCalculator { PregnancyCalculator(dueDate: entry.dueDate, conceptionDate: entry.conceptionDate) }

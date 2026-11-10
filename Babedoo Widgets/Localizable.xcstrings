@@ -2,58 +2,280 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@\nalong" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\ngeschafft"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\nde embarazo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\nde grossesse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\n経過"
+          }
+        }
+      }
     },
     "%@\nto go" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\nverbleibend"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\npor delante"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\nà venir"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@\n残り"
+          }
+        }
+      }
     },
     "%@ %@ along" : {
       "comment" : "Accessibility label for the counter widget; placeholders are the value and unit",
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ %2$@ geschafft"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ %2$@ along"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ %2$@ de embarazo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ %2$@ de grossesse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@%2$@経過"
           }
         }
       }
     },
     "%@ %@ to go" : {
       "comment" : "Accessibility label for the counter widget; placeholders are the value and unit",
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ %2$@ verbleibend"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ %2$@ to go"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ %2$@ por delante"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ %2$@ à venir"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "残り%1$@%2$@"
+          }
+        }
+      }
+    },
+    "%@ complete, %@" : {
+      "comment" : "Accessibility value for the progress widget; placeholders are the percent complete and the time along or remaining (e.g. \"12 weeks along\")",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Fortschritt: %1$@, %2$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ complete, %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ completado, %2$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Progression : %1$@, %2$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@完了、%2$@"
           }
         }
       }
     },
     "%@ complete, %@ %@ along" : {
       "comment" : "Accessibility value for the progress widget; placeholders are the percent complete, the value, and the unit",
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Fortschritt: %1$@; vergangene Zeit: %2$@ %3$@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ complete, %2$@ %3$@ along"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ completado; tiempo transcurrido: %2$@ %3$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Progression : %1$@ ; temps écoulé : %2$@ %3$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@完了、%2$@%3$@経過"
           }
         }
       }
     },
     "%@ complete, %@ %@ to go" : {
       "comment" : "Accessibility value for the progress widget; placeholders are the percent complete, the value, and the unit",
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Fortschritt: %1$@; verbleibende Zeit: %2$@ %3$@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ complete, %2$@ %3$@ to go"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@ completado; tiempo restante: %2$@ %3$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Progression : %1$@ ; temps restant : %2$@ %3$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@完了、残り%2$@%3$@"
+          }
         }
       }
     },
     "%lld day(s)" : {
-      "comment" : "Label for an abbreviated day unit\nLabel for day unit",
+      "comment" : "Label for day unit",
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tag"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tage"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tage"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -81,12 +303,957 @@
               }
             }
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "día"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "días"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "días"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jour"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jours"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jour"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld days\nalong" : {
+      "comment" : "Two-line caption beside a large number of days since conception. The number is displayed separately, so don't include it; it only selects the plural form.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tag\ngeschafft"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tage\ngeschafft"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tage\ngeschafft"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "day\nalong"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "days\nalong"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "día\ntranscurrido"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "días\ntranscurridos"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "días\ntranscurridos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jour\nécoulé"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jours\nécoulés"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jour\nécoulé"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日\n経過"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日\n経過"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld days\nto go" : {
+      "comment" : "Two-line caption beside a large number of days until the due date. The number is displayed separately, so don't include it; it only selects the plural form.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tag\nverbleibend"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tage\nverbleibend"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tage\nverbleibend"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "day\nto go"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "days\nto go"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "día\nrestante"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "días\nrestantes"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "días\nrestantes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jour\nrestant"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jours\nrestants"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "jour\nrestant"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日\n残り"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日\n残り"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld days along" : {
+      "comment" : "Number of days since conception, e.g. \"12 days along\"",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Tag geschafft"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Tage geschafft"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Tage geschafft"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg day along"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg days along"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg día de embarazo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg días de embarazo"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg días de embarazo"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg jour de grossesse"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg jours de grossesse"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg jour de grossesse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg日経過"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg日経過"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld days to go" : {
+      "comment" : "Number of days until the due date, e.g. \"12 days to go\"",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Tag"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Tage"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Tage"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg day to go"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg days to go"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "falta %arg día"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "faltan %arg días"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "faltan %arg días"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg jour"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg jours"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg jour"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "残り%arg日"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "残り%arg日"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld dy(s)" : {
+      "comment" : "Label for an abbreviated day unit",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tg."
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tg."
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Tg."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "day"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "days"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "d"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "d"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "d"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "j"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "j"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "j"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "日"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
     "%lld mo(s)" : {
       "comment" : "Label for an abbreviated month unit",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Mon."
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Mon."
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Mon."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -114,12 +1281,143 @@
               }
             }
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mes"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
     "%lld month(s)" : {
       "comment" : "Label for month unit",
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monat"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monate"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monate"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -147,12 +1445,795 @@
               }
             }
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mes"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld months\nalong" : {
+      "comment" : "Two-line caption beside a large number of months since conception. The number is displayed separately, so don't include it; it only selects the plural form.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monat\ngeschafft"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monate\ngeschafft"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monate\ngeschafft"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "month\nalong"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "months\nalong"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mes\ntranscurrido"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses\ntranscurridos"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses\ntranscurridos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois\nécoulé"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois\nécoulés"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois\nécoulé"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月\n経過"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月\n経過"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld months\nto go" : {
+      "comment" : "Two-line caption beside a large number of months until the due date. The number is displayed separately, so don't include it; it only selects the plural form.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monat\nverbleibend"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monate\nverbleibend"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Monate\nverbleibend"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "month\nto go"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "months\nto go"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mes\nrestante"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses\nrestantes"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "meses\nrestantes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois\nrestant"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois\nrestants"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "mois\nrestant"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月\n残り"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "か月\n残り"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld months along" : {
+      "comment" : "Number of months since conception, e.g. \"3 months along\"",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Monat geschafft"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Monate geschafft"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Monate geschafft"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg month along"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg months along"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg mes de embarazo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg meses de embarazo"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg meses de embarazo"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg mois de grossesse"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg mois de grossesse"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg mois de grossesse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%argか月経過"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%argか月経過"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld months to go" : {
+      "comment" : "Number of months until the due date, e.g. \"3 months to go\"",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Monat"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Monate"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Monate"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg month to go"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg months to go"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "falta %arg mes"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "faltan %arg meses"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "faltan %arg meses"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg mois"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg mois"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg mois"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "残り%argか月"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "残り%argか月"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
     "%lld week(s)" : {
       "comment" : "Label for week unit",
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Woche"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wochen"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wochen"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -180,12 +2261,794 @@
               }
             }
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semana"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semanas"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semanas"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaine"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaines"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaine"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld weeks\nalong" : {
+      "comment" : "Two-line caption beside a large number of weeks since conception. The number is displayed separately, so don't include it; it only selects the plural form.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Woche\ngeschafft"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wochen\ngeschafft"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wochen\ngeschafft"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "week\nalong"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "weeks\nalong"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semana\ntranscurrida"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semanas\ntranscurridas"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semanas\ntranscurridas"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaine\nécoulée"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaines\nécoulées"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaine\nécoulée"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週\n経過"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週\n経過"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld weeks\nto go" : {
+      "comment" : "Two-line caption beside a large number of weeks until the due date. The number is displayed separately, so don't include it; it only selects the plural form.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Woche\nverbleibend"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wochen\nverbleibend"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wochen\nverbleibend"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "week\nto go"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "weeks\nto go"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semana\nrestante"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semanas\nrestantes"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semanas\nrestantes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaine\nrestante"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaines\nrestantes"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "semaine\nrestante"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週\n残り"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週\n残り"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld weeks along" : {
+      "comment" : "Number of weeks since conception, e.g. \"12 weeks along\"",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Woche geschafft"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Wochen geschafft"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg Wochen geschafft"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg week along"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg weeks along"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg semana de embarazo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg semanas de embarazo"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg semanas de embarazo"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg semaine de grossesse"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg semaines de grossesse"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg semaine de grossesse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg週経過"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg週経過"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld weeks to go" : {
+      "comment" : "Number of weeks until the due date, e.g. \"12 weeks to go\"",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Woche"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Wochen"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "noch %arg Wochen"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg week to go"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "%arg weeks to go"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "falta %arg semana"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "faltan %arg semanas"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "faltan %arg semanas"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg semaine"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg semaines"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "encore %arg semaine"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "残り%arg週"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "残り%arg週"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
     "%lld wk(s)" : {
       "comment" : "Label for an abbreviated week unit",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wo."
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wo."
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "Wo."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -213,24 +3076,246 @@
               }
             }
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "sem."
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "sem."
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "sem."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "sem."
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "sem."
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "sem."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%#@arg1@"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "machine_translated",
+                      "value" : "週"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
     "A textual representation of your pregnancy." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Eine Textdarstellung deiner Schwangerschaft."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Una representación en texto de tu embarazo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Une représentation textuelle de votre grossesse."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "妊娠の経過を数字で表示します。"
+          }
+        }
+      }
     },
     "A visual representation of your pregnancy." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Eine visuelle Darstellung deiner Schwangerschaft."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Una representación visual de tu embarazo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Une représentation visuelle de votre grossesse."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "妊娠の経過をグラフで表示します。"
+          }
+        }
+      }
     },
     "Counter Widget" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Zähler-Widget"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Widget de contador"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Widget Compteur"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "カウンターウィジェット"
+          }
+        }
+      }
     },
     "Pregnancy progress" : {
-      "comment" : "Accessibility label for the progress widget"
+      "comment" : "Accessibility label for the progress widget",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Schwangerschaftsfortschritt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Progreso del embarazo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Progression de la grossesse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "妊娠の経過"
+          }
+        }
+      }
     },
     "Progress Widget" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Fortschritts-Widget"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Widget de progreso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Widget Progression"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "経過ウィジェット"
+          }
+        }
+      }
     }
   },
-  "version" : "1.0"
+  "version" : "1.3"
 }

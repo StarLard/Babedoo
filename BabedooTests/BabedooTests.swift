@@ -172,16 +172,28 @@ struct DateDisplayComponentTests {
     }
 
     @Test(arguments: [
-        (DateDisplayComponent.days, 1, "day"),
-        (.days, 0, "days"),
-        (.days, 2, "days"),
-        (.weeks, 1, "week"),
-        (.weeks, 13, "weeks"),
-        (.months, 1, "month"),
-        (.months, 4, "months"),
+        (DateDisplayComponent.days, 1, TimeDirection.along, "day\nalong"),
+        (.days, 0, .remaining, "days\nto go"),
+        (.days, 2, .along, "days\nalong"),
+        (.weeks, 1, .remaining, "week\nto go"),
+        (.weeks, 13, .along, "weeks\nalong"),
+        (.months, 1, .along, "month\nalong"),
+        (.months, 4, .remaining, "months\nto go"),
     ])
-    func unitIsPluralized(component: DateDisplayComponent, quantity: Int, expected: String) {
-        #expect(component.unit(for: quantity) == expected)
+    func captionIsPluralizedWithoutNumber(component: DateDisplayComponent, quantity: Int, direction: TimeDirection, expected: String) {
+        #expect(component.caption(for: quantity, direction: direction) == expected)
+    }
+
+    @Test(arguments: [
+        (DateDisplayComponent.days, 1, TimeDirection.along, "1 day along"),
+        (.days, 0, .remaining, "0 days to go"),
+        (.weeks, 1, .remaining, "1 week to go"),
+        (.weeks, 13, .along, "13 weeks along"),
+        (.months, 1, .along, "1 month along"),
+        (.months, 4, .remaining, "4 months to go"),
+    ])
+    func phraseIncludesPluralizedNumber(component: DateDisplayComponent, quantity: Int, direction: TimeDirection, expected: String) {
+        #expect(component.phrase(for: quantity, direction: direction) == expected)
     }
 
     @Test(arguments: [

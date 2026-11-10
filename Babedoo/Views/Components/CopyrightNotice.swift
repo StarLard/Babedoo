@@ -14,8 +14,11 @@ struct CopyrightNotice: View {
             .font(.footnote)
     }
 
-    /// The current year, formatted without grouping separators (2026, not 2,026).
-    private var year: String { Date.current.formatted(.dateTime.year()) }
+    /// The current Gregorian year as a bare number (2026, not 2,026 or 2026年),
+    /// regardless of the user's calendar and locale.
+    private var year: String {
+        Calendar(identifier: .gregorian).component(.year, from: .current).formatted(.number.grouping(.never))
+    }
 }
 
 struct CopyrightNotice_Previews: PreviewProvider {

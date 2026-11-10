@@ -33,15 +33,15 @@ struct PregnancyProgressView: View {
             dateComponentView(
                 value: alongValue,
                 dateDisplayComponent: dateDisplayComponent,
-                suffix: String(localized: "along", comment: "Suffix for a date label")
+                direction: .along
             )
 
             Divider()
-            
+
             dateComponentView(
                 value: remainingValue,
                 dateDisplayComponent: dateDisplayComponent,
-                suffix: String(localized: "to go", comment: "Suffix for a date label")
+                direction: .remaining
             )
         }
         .contentShape(Rectangle())
@@ -54,8 +54,8 @@ struct PregnancyProgressView: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("Pregnancy progress", comment: "Accessibility label for the progress summary"))
         .accessibilityValue(Text(
-            "\(percentText) complete, \(alongValue.formatted()) \(dateDisplayComponent.unit(for: alongValue)) along, \(remainingValue.formatted()) \(dateDisplayComponent.unit(for: remainingValue)) to go",
-            comment: "Accessibility value for the progress summary; placeholders are the percent complete, the time along, and the time remaining"
+            "\(percentText) complete, \(dateDisplayComponent.phrase(for: alongValue, direction: .along)), \(dateDisplayComponent.phrase(for: remainingValue, direction: .remaining))",
+            comment: "Accessibility value for the progress summary; placeholders are the percent complete, the time along (e.g. \"12 weeks along\"), and the time remaining (e.g. \"28 weeks to go\")"
         ))
         .accessibilityHint(Text("Changes the unit of time", comment: "Accessibility hint for the progress summary"))
         .accessibilityAddTraits(.isButton)
@@ -74,13 +74,13 @@ struct PregnancyProgressView: View {
     
     private func dateComponentView(value: Int,
                                    dateDisplayComponent: DateDisplayComponent,
-                                   suffix: String) -> some View {
+                                   direction: TimeDirection) -> some View {
         HStack(alignment: .lastTextBaseline, spacing: 4) {
             Text(value.formatted())
                 .font(.title)
-            
+
             VStack(alignment: .leading) {
-                Text("\(dateDisplayComponent.unit(for: value))\n\(suffix)")
+                Text(dateDisplayComponent.caption(for: value, direction: direction))
             }
             .font(.caption)
         }

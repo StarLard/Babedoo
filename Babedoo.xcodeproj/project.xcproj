@@ -8,6 +8,10 @@
     "development": "en",
     "supported": [
       "Base",
+      "de",
+      "es",
+      "fr",
+      "ja",
     ],
   },
   "packages": [
@@ -85,6 +89,7 @@
           ],
         },
         { "path": "Localizable.xcstrings", "target-membership": [ "Babedoo/resources" ] },
+        { "path": "InfoPlist.xcstrings", "target-membership": [ "Babedoo/resources" ] },
       ],
     }, {
       "kind": "group",
@@ -118,6 +123,7 @@
         { "path": "Info.plist" },
         { "path": "Babedoo WidgetsExtension.entitlements" },
         { "path": "Localizable.xcstrings", "target-membership": [ "Babedoo WidgetsExtension/resources" ] },
+        { "path": "InfoPlist.xcstrings", "target-membership": [ "Babedoo WidgetsExtension/resources" ] },
       ],
     }, {
       "kind": "group",
@@ -277,7 +283,6 @@
         "GENERATE_INFOPLIST_FILE": "YES",
         "INFOPLIST_FILE": "Babedoo Widgets/Info.plist",
         "INFOPLIST_KEY_CFBundleDisplayName": "Babedoo Widgets",
-        "INFOPLIST_KEY_NSHumanReadableCopyright": "",
         "IPHONEOS_DEPLOYMENT_TARGET": "18.0",
         "LD_RUNPATH_SEARCH_PATHS": [
           "$(inherited)",
